@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,53 +15,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMi-TK-orn">
-                                <rect key="frame" x="56" y="781" width="108" height="66"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="66" id="9Mr-0S-eGc"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="IPK-JE-aS5"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9k-mu-vL5">
+                                <rect key="frame" x="150" y="640" width="114" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="submitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pOr-Je-Xek"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcO-6F-0bi">
-                                <rect key="frame" x="259" y="781" width="107" height="66"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Button"/>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mic-iS-1T3">
-                                <rect key="frame" x="56" y="528" width="302" height="215"/>
-                                <color key="backgroundColor" systemColor="systemBrownColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Mic-iS-1T3" secondAttribute="height" multiplier="302:215" id="DAL-L5-UiB"/>
-                                </constraints>
-                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilf-vR-Ftm">
+                                <rect key="frame" x="168" y="253" width="78" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCk-nU-9Ff">
+                                <rect key="frame" x="168" y="192" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="jcO-6F-0bi" firstAttribute="height" secondItem="NMi-TK-orn" secondAttribute="height" id="4X7-jI-lJU"/>
-                            <constraint firstItem="Mic-iS-1T3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="68K-Xf-2eW"/>
-                            <constraint firstItem="Mic-iS-1T3" firstAttribute="leading" secondItem="NMi-TK-orn" secondAttribute="leading" priority="999" id="9z5-va-efB"/>
-                            <constraint firstItem="Mic-iS-1T3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="G9f-M0-KmP"/>
-                            <constraint firstItem="NMi-TK-orn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="56" id="HBV-LH-0Ed"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jcO-6F-0bi" secondAttribute="trailing" constant="48" id="Nv5-xk-zoh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jcO-6F-0bi" secondAttribute="bottom" constant="15" id="RQK-vt-pZk"/>
-                            <constraint firstItem="NMi-TK-orn" firstAttribute="top" secondItem="Mic-iS-1T3" secondAttribute="bottom" constant="38" id="WUR-PC-eP0"/>
-                            <constraint firstItem="jcO-6F-0bi" firstAttribute="width" secondItem="NMi-TK-orn" secondAttribute="width" multiplier="0.990741" id="ZMO-FG-Mi9"/>
-                            <constraint firstItem="jcO-6F-0bi" firstAttribute="leading" secondItem="NMi-TK-orn" secondAttribute="trailing" constant="95" id="ep1-Hg-X2i"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NMi-TK-orn" secondAttribute="bottom" constant="15" id="fO0-Lg-gnJ"/>
-                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="ilf-vR-Ftm" id="ikz-Vg-CWD"/>
+                        <outletCollection property="labelcollection" destination="KCk-nU-9Ff" collectionClass="NSMutableArray" id="8kY-bh-MuH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="371.01449275362324" y="148.66071428571428"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>
