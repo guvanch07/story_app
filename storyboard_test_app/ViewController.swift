@@ -9,20 +9,47 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var label: UILabel!
+
+    @IBOutlet weak var dateText: UITextField!
     
-    @IBOutlet var labelcollection: [UILabel]!
+    @IBOutlet weak var monthText: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-   
+    @IBOutlet weak var yearText: UITextField!
     
-    @IBAction func submitButton(_ sender: UIButton) {
-        print("onPressed")
-        label.text = "hello label"
+    @IBOutlet weak var labelDay: UILabel!
+    
+    
+  
+    @IBAction func findDate(_ sender: UIButton) {
         
+        
+        guard let day = dateText.text, let month = monthText.text, let year = yearText.text else {return}
+        
+        
+        
+        let calendar = Calendar.current
+        var dateComponents = DateComponents()
+        dateComponents.day = Int(day)
+        dateComponents.month = Int(month)
+        dateComponents.year = Int(year)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "ru_Ru")
+        dateFormatter.dateFormat = "EEEE"
+        
+        guard let date = calendar.date(from: dateComponents) else{return}
+        let weekday = dateFormatter.string(from: date)
+        let capitalizedWeekDay = weekday.capitalized
+        
+        labelDay.text = capitalizedWeekDay
+        
+        
+        
+        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
 }
