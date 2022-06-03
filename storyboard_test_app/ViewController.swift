@@ -10,20 +10,21 @@ import UIKit
 class ViewController: UIViewController {
 
 
-    @IBOutlet weak var dateText: UITextField!
+   
+    
+    @IBOutlet weak var labelDay: UILabel!
+    
+    
+    @IBOutlet weak var dayText: UITextField!
     
     @IBOutlet weak var monthText: UITextField!
     
     @IBOutlet weak var yearText: UITextField!
     
-    @IBOutlet weak var labelDay: UILabel!
-    
-    
-  
     @IBAction func findDate(_ sender: UIButton) {
         
         
-        guard let day = dateText.text, let month = monthText.text, let year = yearText.text else {return}
+        guard let day = dayText.text, let month = monthText.text, let year = yearText.text else {return}
         
         
         

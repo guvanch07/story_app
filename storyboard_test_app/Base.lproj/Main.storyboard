@@ -118,11 +118,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="dateText" destination="YtK-11-k2X" id="8hl-Cy-0cy"/>
-                        <outlet property="dayText" destination="kS5-Vp-EEs" id="gfh-r4-Ymr"/>
-                        <outlet property="findDay" destination="fnJ-4y-xjg" id="6D7-Cq-zbF"/>
+                        <outlet property="dayText" destination="YtK-11-k2X" id="O4l-1N-Iuu"/>
                         <outlet property="labelDay" destination="gIv-xj-fPn" id="C00-9f-PBk"/>
-                        <outlet property="monthText" destination="A2l-VN-NVq" id="sJp-KY-Zre"/>
+                        <outlet property="monthText" destination="A2l-VN-NVq" id="1Qg-TH-EwX"/>
+                        <outlet property="yearText" destination="kS5-Vp-EEs" id="kKP-8k-GJE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
